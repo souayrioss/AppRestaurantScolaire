@@ -1,0 +1,261 @@
+@import url('http://fonts.cdnfonts.com/css/gobold-blocky');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&family=Roboto+Condensed&display=swap');  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 15px;
+	color: white;
+	font-family: "Montserrat";
+}
+.back-img{
+    background-image: url(image/back.png);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+header{
+    margin: 3% 8%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo{
+    width: 200px;
+}
+nav .btn{
+    background-color: #FCE555;
+    color: #0A001F;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    transition: all 0.5s ;
+}
+nav .btn:hover{
+    background-color: transparent;
+    color: #FCE555;
+    border: solid 2px #FCE555;
+    box-shadow: #FCE555 1px 3px 0px;
+    transform: translate(0px, -10px);
+}
+
+article{
+    margin: 6% 8% ;
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-gap : 15%;
+    justify-content: space-between;   
+}
+article .prs{
+    display: flex;
+    flex-direction: column;  
+}
+article .prs h1{
+    font-size: 80px;
+    font-family: "gobold";
+    margin-top: 20%;
+    margin-bottom: 30px;
+}
+article .prs p{
+    font-size: 25px;
+    color: #d5d5d5;
+}
+ 
+article .minions img{
+    width:  300px;
+    float: right;
+    box-shadow: 10px 50px 40px -50px #fae036c5;
+    position: relative;
+    animation-name: move;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    0%   {top:0px;}
+    25%  {top:-20px;}
+    50%  {top:10px;}
+    75%  {top:-30px;}
+    100% {top:0px;}
+  }
+section{
+    margin: 10% 10% ;
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-gap :5rem;
+    
+}
+section .content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+section .content img{
+    width: 70px;
+    height: 70px;
+}
+footer{
+    background-color: #FCE555;
+    color: #0A001F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 25px ;
+    align-items: center;
+    gap: 10px;
+
+
+}
+footer div i{
+    padding: 0 5px;
+}
+@media screen and (max-width:1000px){
+    nav .logo{
+        width: 150px;
+    }
+    nav .btn{
+        width: 120px;
+        padding: 7px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+    article{
+        grid-gap : 10%;
+    }
+
+    article .prs h1{
+        font-size: 60px;
+        margin-top: 15%;
+        margin-bottom: 20px;
+        
+    }
+    article .prs p{
+        font-size: 20px;
+        
+    }
+    article .minions img{
+        width:  230px;
+    }
+    section{
+        grid-gap :3rem;
+        
+    }
+    section .content img{
+        width: 60px;
+    }
+    section .content h2{
+        font-size: 20px;
+    }
+    section .content P{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:800px){
+    nav .logo{
+        width: 120px;
+    }
+    nav .btn{
+        width: 100px;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+    article{
+        grid-gap :5%;
+    }
+
+    article .prs h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    article .prs p{
+        font-size: 17px;
+    
+    }
+    article .minions img{
+        margin-top: 20px;
+        width:  200px;
+    }
+    section{
+        grid-gap :2rem;
+        
+    }
+    section .content img{
+        width: 50px;
+        height: 50px;
+    }
+    section .content h2{
+        font-size: 18px;
+    }
+    section .content P{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:600px){
+    nav .logo{
+        width: 90px;
+    }
+    nav .btn{
+        width: 80px;
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+    article{
+        margin: 6% 8% ;
+        grid-template-columns:  repeat(1, 1fr);
+        grid-gap : 0%;
+        justify-items: center;
+    }
+    article .minions {
+        width: 190px;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        margin-bottom: 20px;
+    }
+    article .prs h1{
+        font-size:45px;
+        margin-top: 5%;
+        text-align: center;
+    }
+    article .prs p{
+        font-size: 15px;
+        text-align: center;
+    }
+    section{
+        grid-template-columns:  repeat(1, 1fr);
+    }
+    footer{
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width:270px){
+    article .minions {
+        width: 90%;
+    }
+    article .prs h1{
+        font-size:35px;
+    }
+    article .prs p{
+        font-size: 13px;
+        text-align: center;
+    }
+    footer{
+        font-size: 13px;
+    }
+}
