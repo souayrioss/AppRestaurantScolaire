@@ -1,0 +1,253 @@
+@import url('http://fonts.cdnfonts.com/css/gobold-blocky');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&family=Roboto+Condensed&display=swap');               
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+	color: white;
+	font-family: "Montserrat";
+}
+.back-img{
+    background-image: url(image/backlog.png);
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.container{
+    margin: 7% 6%;
+    display: grid;
+    grid-template-columns: 50% 25%;
+    grid-gap :20%;
+
+}
+.minions{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+    
+}
+.minions img{
+	width:  300px;
+    box-shadow: 0px 50px 40px -50px #fae036c5;
+    position: relative;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    0%   {top:-10px;}
+    25%  {top:-30px;}
+    50%  {top:0px;}
+    75%  {top:-40px;}
+    100% {top:-10px;}
+  }
+.login-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+form{
+	width: 100%;
+	padding: 30px 40px;
+	border: solid 5px #FCE555;
+	border-radius: 20px;
+    box-shadow: #f5e162 0px 0px 30px;
+
+}
+
+
+.login-content img{
+    height: 70px;
+    transition: all 1.5s ease;
+}
+form:hover  img{
+    height: 80px;
+    transform: rotate(1080deg);
+}
+
+
+.login-content h1{
+    font-size: 35px;
+    font-family: "gobold";
+    margin: 20px auto;
+    transition: all 2s ease;
+}
+.login-content .input-form{
+    display: flex;
+    flex-direction: column;
+    text-align: left    ;
+}
+
+.input-form input{
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 15px;
+
+}
+.input-form input:focus{
+    border: solid 3px #FCE555 ;
+}
+.input-form label{
+    font-size: 17px;
+    margin-bottom: 8px;
+    font-weight: 550;
+}
+.login-content .input-option{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    margin-top: 25px;
+    background-color: #FCE555;
+    color: #0A001F;
+    width:95%;
+	height: 35px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: content-box;
+    transition: all 0.5s ;
+}
+.btn:hover{
+    background-color: transparent;
+    color: #FCE555;
+    border: solid 2px #FCE555;
+    box-shadow: #FCE555 1px 3px 0px;
+    transform: translate(0px, -10px);
+}
+
+@media screen and (max-width:1201px) {
+    form{
+        width: 500px;
+        padding: 30px;
+    }
+    .minions img{
+        width: 250px;
+    }
+    .login-content img{
+        height: 110px;
+    }
+    .login-content h1{
+        font-size: 35px;
+    }
+    .input-form input{
+        font-size: 13px;
+    
+    }
+    .input-form label{
+        font-size: 16px;
+    }   
+    
+}
+@media screen and (max-width:995px) {
+    .container{
+        grid-gap :25%;
+    }
+}
+@media screen and (max-width:900px) {
+    .container{
+        margin: 10% auto;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .minions{
+        display: none;
+    }
+    form{
+        width: 90%;
+        padding: 40px;
+    }
+    .login-content img{
+        height: 120px;
+    }
+    .login-content h1{
+        font-size: 35px;
+    }
+    .input-form input{
+        font-size: 12px;
+    
+    }
+    .input-form label{
+        font-size: 16px;
+    }  
+    .btn{
+        height: 30px;
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:500px) {
+
+    form{
+        width: 80%;
+        padding: 30px;
+        font-size: 12px;
+    }
+    .input-form input{
+        height: 30px;
+    }
+    .login-content img{
+        height: 100px;
+    }
+    .login-content h1{
+        font-size: 25px;
+    }
+    .input-form input{
+        font-size: 10px;
+    
+    }
+    .input-form label{
+        font-size: 14px;
+    }  
+    .btn{
+        height: 25px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:450px) {
+
+    form{
+        width: 100%;
+    }
+}
+@media screen and (max-width:350px) {
+    form{
+        padding: 20px;
+        font-size: 10px;
+    }
+    .login-content img{
+        height: 80px;
+    }
+    .login-content h1{
+        font-size: 20px;
+    }
+    .input-form input{
+        font-size: 8px;
+    
+    }
+    .input-form label{
+        font-size: 12px;
+    }  
+    .btn{
+        height: 20px;
+        font-size: 13px;
+        width:90%;
+    }
+}

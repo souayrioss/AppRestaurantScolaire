@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="back-img"></div>
+    <main>
+        <section class="container">
+            <div class="login-content">
+                <form >
+                    <img src="image/avatar.svg" alt="avatar">
+                    <h1 class="title">Connexion :</h1>
+                        <div class="input-form">
+                            <label for="email">Adresse email</label>
+                            <input type="email" name="email" id="email" required>
+                            <label for="password">Mot de passe </label>
+                            <input type="password" name="password" id="password" required>
+                         </div>
+                        <div class="input-option">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">Restez connecté</label>
+                              </div>
+                            
+                            <a href="forgot.html">Mot de passe oublié ?</a>
+                        </div>
+                        <button type="submit" onsubmit="myFunction()" class="btn">Login</button> 
+                </form>
+            </div>
+            <div class="minions">
+                <img src="image/minions.png" alt="log">
+            </div>
+        </section>
+    </main>
+    <script>
+        // function myFunction(){
+            
+        //     var email=document.getElementById("email").value;
+        //     var password=document.getElementById("password").value;
+        //     if(email = "e@e"){
+        //        window.location.assign("choisirplat.html");
+        //     }
+        //     else if(email=="staf@gmail.com")
+        //     {
+        //         window.location.assign("feesbacks.html");
+        //     }
+        //     else
+        //     {
+        //         window.location.assign("index.html");
+        //     }
+
+        // }
+    </script>
+</body>
+</html>
